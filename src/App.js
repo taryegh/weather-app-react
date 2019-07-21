@@ -1,5 +1,6 @@
 import React from "react";
-import Titles from "./components/Titles";
+import "./App.css";
+import Header from "./components/Header";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
@@ -14,9 +15,9 @@ class App extends React.Component {
       country: undefined,
       humidity: undefined,
       description: undefined,
-      error: undefined,
       maxTemp: undefined,
-      minTemp: undefined
+      minTemp: undefined,
+      error: undefined
     };
     this.getWeather = this.getWeather.bind(this);
   }
@@ -31,24 +32,36 @@ class App extends React.Component {
     );
 
     const data = await apiCall.json();
-    console.log(data);
 
-    this.setState({
-      temperature: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      maxTemp: data.main.temp_max,
-      minTemp: data.main.temp_min,
-      error: ""
-    });
+    if (city && country) {
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        maxTemp: data.main.temp_max,
+        minTemp: data.main.temp_min,
+        error: ""
+      });
+    } else {
+      this.setState({
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        maxTemp: undefined,
+        minTemp: undefined,
+        error: 'You should indicate city and the country.'
+      });
+    }
   }
 
   render() {
     return (
       <div>
-        <Titles />
+        <Header />
         <Form getWeather={this.getWeather} />
         <Weather
           temperature={this.state.temperature}
@@ -56,6 +69,7 @@ class App extends React.Component {
           country={this.state.country}
           humidity={this.state.humidity}
           description={this.state.description}
+          error={this.state.error}
           maxTemp={this.state.maxTemp}
           minTemp={this.state.minTemp}
         />

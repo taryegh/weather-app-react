@@ -1,0 +1,16 @@
+* {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 300;
+  font-family: "Lato";
+}
+
+
+body {
+  background-image: linear-gradient(rgba(228, 8, 8, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../src/cloud.jpg);
+    
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
