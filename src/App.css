@@ -14,3 +14,67 @@ body {
   background-position: center;
   height: 100vh;
 }
+
+.header{
+  width: 50%;
+  display: flexbox;
+
+}
+
+.header h1 {
+  font-size: 60px;
+  top: 100px
+}
+
+.header p {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.right {
+  width: 50%;
+  display: flexbox;
+  background-color: rgba(11, 38, 59, 0.712);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 106vh;
+}
+
+.form {
+  margin-top: 60px;
+}
+
+.form input {
+  width: 400px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+
+}
+
+input:focus {
+  outline: none;
+}
+
+.form button {
+  width: 400px;
+  height: 35px;
+  background-color: rgb(73, 141, 109);
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.weather h1 {
+  font-size: 60px;
+}
+
+.weather h2 {
+}

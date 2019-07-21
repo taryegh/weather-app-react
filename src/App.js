@@ -53,7 +53,7 @@ class App extends React.Component {
         description: undefined,
         maxTemp: undefined,
         minTemp: undefined,
-        error: 'You should indicate city and the country.'
+        error: "You should indicate city and the country."
       });
     }
   }
@@ -62,17 +62,19 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-          maxTemp={this.state.maxTemp}
-          minTemp={this.state.minTemp}
-        />
+        <div className="right">
+          <Form getWeather={this.getWeather} />
+          <Weather
+            temperature={this.state.temperature}
+            city={this.state.city}
+            country={this.state.country}
+            humidity={this.state.humidity}
+            description={this.state.description}
+            error={this.state.error}
+            maxTemp={this.state.maxTemp}
+            minTemp={this.state.minTemp}
+          />
+        </div>
       </div>
     );
   }
