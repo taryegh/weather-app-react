@@ -43,6 +43,9 @@ class App extends React.Component {
       const video = document.getElementById("myVideo");
       video.play();
 
+      const probe = document.getElementById('probe');
+      probe.style.display='block';
+
       this.setState({
         temperature: Math.round(data.main.temp),
         city: data.name,
