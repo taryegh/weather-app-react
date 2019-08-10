@@ -5,18 +5,11 @@
   font-family: "Lato";
 }
 
-
 body {
-  /* background-image: linear-gradient(rgba(228, 8, 8, 0.1), rgba(0, 0, 0, 0.1)),
-    url(../src/cloud.jpg);
-    
-  background-size: cover;
-  background-position: center; */
   height: 100vh;
-  
 }
 
-.header{
+.header {
   position: absolute;
   width: 50%;
   display: flexbox;
@@ -59,7 +52,6 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 400;
-
 }
 
 input:focus {
@@ -83,12 +75,11 @@ input:focus {
   font-size: 60px;
 }
 
-
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
-  z-index:0;
+  z-index: 0;
 }
