@@ -7,11 +7,11 @@
 
 
 body {
-  background-image: linear-gradient(rgba(228, 8, 8, 0.1), rgba(0, 0, 0, 0.1)),
+  /* background-image: linear-gradient(rgba(228, 8, 8, 0.1), rgba(0, 0, 0, 0.1)),
     url(../src/cloud.jpg);
     
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   height: 100vh;
 }
 
@@ -70,6 +70,8 @@ input:focus {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 .weather h1 {

@@ -22,8 +22,14 @@ class App extends React.Component {
     this.getWeather = this.getWeather.bind(this);
   }
 
+  componentDidMount() {
+    const video = document.getElementById("myVideo");
+    video.pause();
+  }
+
   async getWeather(e) {
     e.preventDefault();
+
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
 
@@ -34,6 +40,9 @@ class App extends React.Component {
     const data = await apiCall.json();
 
     if (city && country) {
+      const video = document.getElementById("myVideo");
+      video.play();
+
       this.setState({
         temperature: Math.round(data.main.temp),
         city: data.name,
